@@ -44,6 +44,37 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_CANCELED) return;
 
+<<<<<<< HEAD:Lab4App/app/src/main/java/com/example/sportscentric/MainActivity.java
+        ImageView avatarImage = findViewById(R.id.logoImage);
+
+        // Obtenez l'ID de l'image sélectionnée à partir des données de l'intent
+        int selectedImageId = data.getIntExtra("imageID", R.id.logoImage00);
+
+        // Utilisez une instruction switch avec les constantes de l'énumération
+        String drawableName;
+        switch (LogoImageId.values()[selectedImageId]) {
+            case LOGO_IMAGE_00:
+                drawableName = "ic_logo_00";
+                break;
+            case LOGO_IMAGE_01:
+                drawableName = "ic_logo_01";
+                break;
+            case LOGO_IMAGE_02:
+                drawableName = "ic_logo_02";
+                break;
+            case LOGO_IMAGE_03:
+                drawableName = "ic_logo_03";
+                break;
+            case LOGO_IMAGE_04:
+                drawableName = "ic_logo_04";
+                break;
+            case LOGO_IMAGE_05:
+                drawableName = "ic_logo_05";
+                break;
+            default:
+                drawableName = "ic_logo_00";
+                break;
+=======
         // Getting the Avatar Image we show to our users
         ImageView avatarImage = findViewById(R.id.logoImage);
 
@@ -63,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             drawableName = "ic_logo_04";
         } else if (imageID == R.id.logoImage05) {
             drawableName = "ic_logo_05";
+>>>>>>> 335324e6a94321858d30b3d30c8aae2376132c70:SportsCentric3/app/src/main/java/com/example/sportscentric/MainActivity.java
         }
 
         int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
