@@ -43,33 +43,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_CANCELED) return;
-//Getting the Avatar Image we show to our users
-        ImageView avatarImage = (ImageView) findViewById(R.id.logoImage);
-//Figuring out the correct image
-        String drawableName = "ic_logo_00";
-        switch (data.getIntExtra("imageID", R.id.logoImage)) {
-            case R.id.logoImage00:
+
+        ImageView avatarImage = findViewById(R.id.logoImage);
+
+        // Obtenez l'ID de l'image sélectionnée à partir des données de l'intent
+        int selectedImageId = data.getIntExtra("imageID", R.id.logoImage00);
+
+        // Utilisez une instruction switch avec les constantes de l'énumération
+        String drawableName;
+        switch (LogoImageId.values()[selectedImageId]) {
+            case LOGO_IMAGE_00:
                 drawableName = "ic_logo_00";
                 break;
-            case R.id.logoImage01:
+            case LOGO_IMAGE_01:
                 drawableName = "ic_logo_01";
                 break;
-            case R.id.logoImage02:
+            case LOGO_IMAGE_02:
                 drawableName = "ic_logo_02";
                 break;
-            case R.id.logoImage03:
+            case LOGO_IMAGE_03:
                 drawableName = "ic_logo_03";
                 break;
-            case R.id.logoImage04:
+            case LOGO_IMAGE_04:
                 drawableName = "ic_logo_04";
                 break;
-            case R.id.logoImage05:
+            case LOGO_IMAGE_05:
                 drawableName = "ic_logo_05";
                 break;
             default:
                 drawableName = "ic_logo_00";
                 break;
         }
+
         int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
         avatarImage.setImageResource(resID);
     }
