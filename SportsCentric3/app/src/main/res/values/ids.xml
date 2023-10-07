@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="LogoImage01" type="id">LogoImage01</item>
-    <item name="teamid00" type="id">logoImage00</item>
-    <item name="teamid01" type="id">logoImage01</item>
-    <item name="teamid02" type="id">logoImage02</item>
-    <item name="teamid03" type="id">logoImage03</item>
-    <item name="teamid04" type="id">logoImage04</item>
-    <item name="teamid05" type="id">logoImage05</item>
+    <item name="LogoImage01" type="id"></item>
+    <item name="teamid00" type="id"></item>
+    <item name="teamid01" type="id"></item>
+    <item name="teamid02" type="id"></item>
+    <item name="teamid03" type="id"></item>
+    <item name="teamid04" type="id"></item>
+    <item name="teamid05" type="id"></item>
 </resources>
